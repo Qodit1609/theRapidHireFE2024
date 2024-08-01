@@ -4,18 +4,17 @@ function Sitemap() {
   return (
     <div>
       <Helmet>
-      <meta charset="utf-8"/>
-<title>Sitemap - TheRapidHire</title>
-<meta name="description" content="Sitemap - Page List of the website.  Home |Services|Technology|Work with us"/>
-<meta
+        <meta charset="utf-8" />
+        <title>Sitemap - TheRapidHire</title>
+        <meta
+          name="description"
+          content="Sitemap - Page List of the website.  Home |Services|Technology|Work with us"
+        />
+        <meta
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
-  <link rel="canonical" href="https://www.therapidhire.com/sitemap" />
-
-
-
-         
+        <link rel="canonical" href="https://www.therapidhire.com/sitemap" />
       </Helmet>
 
       <div className="main-content">
@@ -97,11 +96,11 @@ function Sitemap() {
                         <a href="/termsofservices">Terms of Services</a>
                       </h4>
                     </li>
-                    <li className="footer-title">
+                    {/* <li className="footer-title">
                       <h4>
                         <a href="/login">Login</a>
                       </h4>
-                    </li>
+                    </li> */}
                     <li className="footer-title">
                       <h4>
                         {" "}

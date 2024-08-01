@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { SOCIAL_LINKS } from "../Container/SocialLink.js";
 
 function Footer() {
   const [email, setEmail] = useState("");
@@ -33,7 +34,7 @@ function Footer() {
         className="rs-footer style1 footer-home3-style"
         style={{ position: "relative", overflow: "hidden" }}
       >
-        <div
+        {/* <div
           className="icon-six"
           style={{ backgroundImage: "url(images/icon-6.png)" }}
         ></div>
@@ -41,11 +42,14 @@ function Footer() {
         <div
           className="icon-seven"
           style={{ backgroundImage: "url(images/icon-7.png)" }}
-        ></div>
+        ></div> */}
         <div className="footer-top">
           <div className="container">
-            <div className="row">
-              <div className="col-lg-2 col-md-6 col-sm-12 md-mb-10">
+            <div className="row footer-links">
+              <div
+                className="col-lg-2 col-md-6 col-sm-12 md-mb-10"
+                // style={{ background: 'red' }}
+              >
                 <h3 className="footer-title">Quick Links</h3>
                 <ul className="site-map">
                   <li>
@@ -129,6 +133,19 @@ function Footer() {
                   Stay up to update with our latest news and products.
                 </p>
                 <br />
+                <div
+                  style={{
+                    paddingBottom: "15px",
+                  }}
+                >
+                  <a
+                    href="/fire"
+                    className="enquirebtn me-3"
+                    style={{ backgroundColor: "#FF4500" }}
+                  >
+                    TRH Fire Safety Solution
+                  </a>
+                </div>
                 <div class="contentsubs">
                   <form class="subscription">
                     <input
@@ -148,13 +165,32 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div className="footer-bottom">
+        <div className="footer-bottom pb-4">
           <div className="container">
-            <div className="row y-middle">
-              <div className="col-lg-12">
-                <div className="copyright text-center">
-                  <p>©2022 TheRapidHire Pvt. Ltd . All Rights Reserved.</p>
+            <div className="row flex-lg-row-reverse align-items-center text-center text-lg-start">
+              <div className="col-lg-6 mb-lg-0 mb-3">
+                <div className="social-icons d-flex justify-content-center justify-content-lg-end me-xxl-0 me-lg-4">
+                  {SOCIAL_LINKS.map((link, index) => (
+                    <a
+                      key={index}
+                      href={link.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`text-white fs-5 zoom-in zoom-in-1 ${
+                        index !== SOCIAL_LINKS.length - 1 ? "me-sm-5 me-4" : ""
+                      }`}
+                      aria-label={link.name}
+                    >
+                      {link.icon}
+                    </a>
+                  ))}
                 </div>
+              </div>
+              <div className="col-lg-6">
+                <p className="text-center text-lg-start text-white m-0 p-0">
+                  &copy; {new Date().getFullYear()} The RapidHire Pvt. Ltd. All
+                  rights reserved.
+                </p>
               </div>
             </div>
           </div>

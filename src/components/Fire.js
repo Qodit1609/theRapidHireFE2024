@@ -1,5 +1,5 @@
 import React from "react";
-import Marquee from "react-fast-marquee";
+// import Marquee from "react-fast-marquee";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import { Helmet } from "react-helmet";

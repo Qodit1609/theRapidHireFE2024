@@ -10,21 +10,8 @@ function Expertteam() {
   };
 
   const items1 = [
+    
     <div className="itemteam" data-value="1">
-      <div className="team-item-wrap">
-        <div className="team-wrap">
-          <div className="image-inner">
-            <img src="images/team1.webp" alt="Shraddha_Sharma" />
-          </div>
-        </div>
-        <div className="team-content text-center">
-          <h4 className="person-name">Shraddha Sharma</h4>
-          <span className="designation">BUSINESS DEVELOPMENT</span>
-          {/* <div> EXECUTIVE</div> */}
-        </div>
-      </div>
-    </div>,
-    <div className="itemteam" data-value="2">
       <div className="team-item-wrap">
         <div className="team-wrap">
           <div className="image-inner">
@@ -37,7 +24,7 @@ function Expertteam() {
         </div>
       </div>
     </div>,
-    <div className="itemteam" data-value="3">
+    <div className="itemteam" data-value="2">
       <div className="team-item-wrap">
         <div className="team-wrap">
           <div className="image-inner">
@@ -50,33 +37,20 @@ function Expertteam() {
         </div>
       </div>
     </div>,
+    <div className="itemteam" data-value="3">
+    <div className="team-item-wrap">
+      <div className="team-wrap">
+        <div className="image-inner">
+          <img src="images/team8.webp" alt="Navin Kukreja" />
+        </div>
+      </div>
+      <div className="team-content text-center">
+        <h4 className="person-name">Navin Kukreja</h4>
+        <span className="designation">SOFTWARE DEVELOPER</span>
+      </div>
+    </div>
+  </div>,
     <div className="itemteam" data-value="4">
-      <div className="team-item-wrap">
-        <div className="team-wrap">
-          <div className="image-inner">
-            <img src="images/team4.webp" alt="Sumit Tiwari" />
-          </div>
-        </div>
-        <div className="team-content text-center">
-          <h4 className="person-name">Sumit Tiwari</h4>
-          <span className="designation">SOFTWARE DEVELOPER</span>
-        </div>
-      </div>
-    </div>,
-    <div className="itemteam" data-value="5">
-      <div className="team-item-wrap">
-        <div className="team-wrap">
-          <div className="image-inner">
-            <img src="images/team7.webp" alt="Yogita Saxena" />
-          </div>
-        </div>
-        <div className="team-content text-center">
-          <h4 className="person-name">Yogita Saxena</h4>
-          <span className="designation">SOFTWARE DEVELOPER</span>
-        </div>
-      </div>
-    </div>,
-    <div className="itemteam" data-value="6">
       <div className="team-item-wrap">
         <div className="team-wrap">
           <div className="image-inner">
@@ -88,33 +62,7 @@ function Expertteam() {
           <span className="designation">SOFTWARE DEVELOPER</span>
         </div>
       </div>
-    </div>,
-    <div className="itemteam" data-value="7">
-      <div className="team-item-wrap">
-        <div className="team-wrap">
-          <div className="image-inner">
-            <img src="images/team5.webp" alt="vipin joshi" />
-          </div>
-        </div>
-        <div className="team-content text-center">
-          <h4 className="person-name">Vipin Joshi</h4>
-          <span className="designation">HR MANAGER</span>
-        </div>
-      </div>
-    </div>,
-    <div className="itemteam" data-value="8">
-      <div className="team-item-wrap">
-        <div className="team-wrap">
-          <div className="image-inner">
-            <img src="images/team8.webp" alt="Navin Kukreja" />
-          </div>
-        </div>
-        <div className="team-content text-center">
-          <h4 className="person-name">Navin Kukreja</h4>
-          <span className="designation">SOFTWARE DEVELOPER</span>
-        </div>
-      </div>
-    </div>,
+    </div>
   ];
 
   return (
@@ -138,8 +86,8 @@ function Expertteam() {
             autoPlayInterval={3000}
             animationDuration={3000}
             animationType="fadeout"
-            infinite
             mouseTracking
+            infinite
             items={items1}
             responsive={responsive}
             controlsStrategy="alternate"

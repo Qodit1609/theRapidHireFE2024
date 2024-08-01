@@ -4,6 +4,8 @@ import CardTechno from "../Container/CardTechno.js";
 import Marquee from "react-fast-marquee";
 import { Helmet } from "react-helmet";
 
+import TechBanner from "../img/technologyImage.jpg";
+
 function Technology() {
   return (
     <div>
@@ -70,6 +72,7 @@ function Technology() {
 
       <div className="main-content">
         <Common
+          banner={TechBanner}
           name="Technology"
           description=" The way we buy, sell, and do everything is changing as a result of technological advancements. With software development services, we help clients realize their full potential and accelerate their growth.	"
         />

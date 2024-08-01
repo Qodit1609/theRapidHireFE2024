@@ -16,6 +16,20 @@ import Installation from "./components/Installation";
 import Maintenance from "./components/Maintenance";
 import Testing from "./components/Testing";
 import Training from "./components/Training";
+import OurWork from "./components/OurWork";
+import OurWorkApp from "./newComponent/ourWorkApp/ourWorkApp";
+import OurWorkUI from "./newComponent/ourWorkUI/ourWorkUI";
+import OurWorkSoftware from "./newComponent/ourWorkSoftware/ourWorkSoftware";
+import OurWorkAI from "./newComponent/ourWorkAi/ourWorkAi";
+import OurWorkBlockchain from "./newComponent/ourWorkBlockchain/ourWorkBlockchain";
+import OurWorkAgile from "./newComponent/ourWorkAgile/ourWorkAgile";
+import OurWorkDevOps from "./newComponent/ourWorkDevOps/ourWorkDevOps";
+import OurWorkCloudService from "./newComponent/ourWorkCloudService/ourWorkCloudService";
+import OurWorkItConsulting from "./newComponent/ourWorkItConsulting/ourWorkItConsulting";
+import OurWorkCyber from "./newComponent/ourWorkCyber/ourWorkCyber";
+import OurWorkDataAnalyst from "./newComponent/ourWorkDataAnalyst/ourWorkDataAnalyst";
+import OurWorkIOT from "./newComponent/ourWorkIOT/ourWorkIOT";
+import OurWorkEcommerce from "./newComponent/ourWorkEcommerce/ourWorkEcommerce";
 
 const Home = lazy(() => import("./components/Home"));
 
@@ -137,67 +151,76 @@ function App() {
   const schemaFaq_JSON = JSON.stringify(schemaFaq);
 
   const Opengraph = {
-
     "@context": "https://schema.org",
-    "@graph": [{
-      "@type": "WebSite",
-      "@id": "https://www.therapidhire.com/#website",
-      "url": "https://www.therapidhire.com/",
-      "name": "The Rapid Hire",
-      "description": "Quality over Quantiy",
-      "potentialAction": [{
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://www.therapidhire.com/?s={search_term_string}"
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://www.therapidhire.com/#website",
+        url: "https://www.therapidhire.com/",
+        name: "The Rapid Hire",
+        description: "Quality over Quantiy",
+        potentialAction: [
+          {
+            "@type": "SearchAction",
+            target: {
+              "@type": "EntryPoint",
+              urlTemplate:
+                "https://www.therapidhire.com/?s={search_term_string}",
+            },
+            "query-input": "required name=search_term_string",
+          },
+        ],
+        inLanguage: "en-US",
+      },
+      {
+        "@type": "ImageObject",
+        "@id": "https://www.therapidhire.com/#primaryimage",
+        inLanguage: "en-US",
+        url: "https://www.therapidhire.com/images/software.jpg",
+        contentUrl: "https://www.therapidhire.com/images/software.jpg",
+        width: 1200,
+        height: 630,
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://www.therapidhire.com/#webpage",
+        url: "https://www.therapidhire.com/",
+        name: "TheRapidHire-Software Development | IT outsourcing Company",
+        isPartOf: {
+          "@id": "https://www.therapidhire.com/#website",
         },
-        "query-input": "required name=search_term_string"
-      }],
-      "inLanguage": "en-US"
-    }, {
-      "@type": "ImageObject",
-      "@id": "https://www.therapidhire.com/#primaryimage",
-      "inLanguage": "en-US",
-      "url": "https://www.therapidhire.com/images/software.jpg",
-      "contentUrl": "https://www.therapidhire.com/images/software.jpg",
-      "width": 1200,
-      "height": 630
-    }, {
-      "@type": "WebPage",
-      "@id": "https://www.therapidhire.com/#webpage",
-      "url": "https://www.therapidhire.com/",
-      "name": "TheRapidHire-Software Development | IT outsourcing Company",
-      "isPartOf": {
-        "@id": "https://www.therapidhire.com/#website"
+        primaryImageOfPage: {
+          "@id": "https://www.therapidhire.com/#primaryimage",
+        },
+        datePublished: "2023-03-23T05:00:16+00:00",
+        dateModified: "2023-03-23T05:00:16+00:00",
+        description:
+          "TheRapidHire is a CMMI Level-5 software development, IT outsourcing, and HR company. We are a CMMI 5-level certified organization providing quality products and professionals on a contract basis.",
+        breadcrumb: {
+          "@id": "https://www.therapidhire.com/#breadcrumb",
+        },
+        inLanguage: "en-US",
+        potentialAction: [
+          {
+            "@type": "ReadAction",
+            target: ["https://www.therapidhire.com/"],
+          },
+        ],
       },
-      "primaryImageOfPage": {
-        "@id": "https://www.therapidhire.com/#primaryimage"
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://www.therapidhire.com/#breadcrumb",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Home",
+          },
+        ],
       },
-      "datePublished": "2023-03-23T05:00:16+00:00",
-      "dateModified": "2023-03-23T05:00:16+00:00",
-      "description": "TheRapidHire is a CMMI Level-5 software development, IT outsourcing, and HR company. We are a CMMI 5-level certified organization providing quality products and professionals on a contract basis.",
-      "breadcrumb": {
-        "@id": "https://www.therapidhire.com/#breadcrumb"
-      },
-      "inLanguage": "en-US",
-      "potentialAction": [{
-        "@type": "ReadAction",
-        "target": ["https://www.therapidhire.com/"]
-      }]
-    }, {
-      "@type": "BreadcrumbList",
-      "@id": "https://www.therapidhire.com/#breadcrumb",
-      "itemListElement": [{
-        "@type": "ListItem",
-        "position": 1, 
-        "name": "Home"
-      }]
-    }]
-  
-    
+    ],
   };
   const schemaOpengraph_JSON = JSON.stringify(Opengraph);
-
 
   return (
     <div>
@@ -264,9 +287,64 @@ function App() {
             <Route exact path="/maintenance" element={<Maintenance />}></Route>
             <Route exact path="/testing" element={<Testing />}></Route>
             <Route exact path="/training" element={<Training />}></Route>
+
+            <Route exact path="/our-work" element={<OurWork />}></Route>
+            <Route
+              exact
+              path="/our-work/mobile-app"
+              element={<OurWorkApp />}
+            ></Route>
+            <Route exact path="/our-work/ui-ux" element={<OurWorkUI />}></Route>
+            <Route
+              exact
+              path="/our-work/software-development"
+              element={<OurWorkSoftware />}
+            ></Route>
+            <Route exact path="/our-work/ai-ml" element={<OurWorkAI />}></Route>
+            <Route
+              exact
+              path="/our-work/blockchain"
+              element={<OurWorkBlockchain />}
+            ></Route>
+            <Route
+              exact
+              path="/our-work/agile"
+              element={<OurWorkAgile />}
+            ></Route>
+            <Route
+              exact
+              path="/our-work/devops"
+              element={<OurWorkDevOps />}
+            ></Route>
+            <Route
+              exact
+              path="/our-work/cloud-service"
+              element={<OurWorkCloudService />}
+            ></Route>
+            <Route
+              exact
+              path="/our-work/it-consulting"
+              element={<OurWorkItConsulting />}
+            ></Route>
+            <Route
+              exact
+              path="/our-work/cyber-security"
+              element={<OurWorkCyber />}
+            ></Route>
+            <Route
+              exact
+              path="/our-work/data-analyst"
+              element={<OurWorkDataAnalyst />}
+            ></Route>
+            <Route
+              exact
+              path="/our-work/eCommerce"
+              element={<OurWorkEcommerce />}
+            ></Route>
+            <Route exact path="/our-work/iot" element={<OurWorkIOT />}></Route>
           </Routes>
           <Footer />
-          <Sidebar />
+          {/* <Sidebar /> */}
         </Suspense>
       </BrowserRouter>
     </div>

@@ -4,12 +4,15 @@ import { useNavigate } from "react-router";
 import { baseURL } from "./Basepath";
 import ScrollToTop from "react-scroll-to-top";
 import { Helmet } from "react-helmet";
+
 function Blog() {
   const [users, setUsers] = useState([]);
   const [data, setdata] = useState([]);
   const [filterData, setFilterData] = useState([]);
   const [flag, setFlag] = useState(false);
+
   const Navigate = useNavigate();
+
   useEffect(() => {
     axios({
       url: baseURL + "blog/getAll",
@@ -31,6 +34,7 @@ function Blog() {
 
     setFilterData(EL);
   };
+
   function getOne(id) {
     axios
       .get("https://trhblogsnew.herokuapp.com/blog/getOne/" + id)
@@ -69,7 +73,7 @@ function Blog() {
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:1, max-video-preview:1"
         />
-       
+
         <meta
           name="keywords"
           content="blockchain, IoT,Internet of things, java, cloud computing, technology, business, software development, mobile application, android, ios, business, marketing, digital marketing, industry insights, cryptocurrency, bitcoin , NFT, fintech , AI, ML, DL, deep learning, python, programming"
@@ -135,6 +139,7 @@ function Blog() {
             </div>
           </div>
         </div>
+
         {users ? (
           <div className="blog-area pt-95 pb-95">
             <div className="container">
@@ -145,7 +150,7 @@ function Blog() {
                       ? users &&
                         users.map((item) => (
                           <div className="col-lg-6 col-md-6">
-                            <div className="single-blog-card">
+                            <div className="single-blog-card cardShadow">
                               <div className="blog-image">
                                 <img src={item.bannerImage} alt="image" />
 
@@ -153,9 +158,9 @@ function Blog() {
                                   <div className="date">{item.date}</div>
                                 )}
                               </div>
-                              <div className="blog-content">
+                              <div className="blog-content px-2">
                                 <h3>{item.title}</h3>
-                                <p>{item.mainDesc.slice(0, 124)}</p>
+                                <p>{item.mainDesc.slice(0, 110) + "..."}</p>
                                 <button
                                   onClick={() => newPage1(item._id, item.title)}
                                   className="blogbtn"

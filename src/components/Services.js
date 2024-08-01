@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet";
 import Card from "../Container/Card.js";
 import CardData from "../Container/CardJSON";
 import Common from "../Container/Common.js";
+import ServiceBanner from "../img/serviceImage.jpg";
 
 function Services() {
   return (
@@ -73,6 +74,7 @@ function Services() {
       <div className="offwrap">
         <div className="main-content">
           <Common
+            banner={ServiceBanner}
             name="Services"
             description=" We offer industry-specific and need-based services, allowing us to deliver customized solutions. Customers range from small individual startups to large corporations."
           />
@@ -81,11 +83,11 @@ function Services() {
             <div className="container custom">
               <div className="row">
                 {CardData.map((item, key) => (
-                  <div   
+                  <div
                     className="col-lg-4 col-md-6 mb-20 wow fadeInDown"
                     data-wow-duration="0.5s"
                     data-wow-delay="0.1s"
-                  > 
+                  >
                     <Card
                       imgsrc={item.imgsrc}
                       title={item.title}

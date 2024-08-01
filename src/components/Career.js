@@ -223,7 +223,7 @@ function Career() {
             <br />
             <div className="row">
               <div className="col-xl-4 col-lg-6 col-md-12 mb-30">
-                <div className="job-wrapper ">
+                <div className="job-wrapper job-card">
                   <div className="banck-icon">
                     <i className="fa fa-briefcase"></i>
                   </div>
@@ -294,7 +294,7 @@ function Career() {
                 </div>
               </div>
               <div className="col-xl-4 col-lg-6 col-md-12 mb-30">
-                <div className="job-wrapper mb-30">
+                <div className="job-wrapper mb-30 job-card">
                   <div className="banck-icon">
                     <i className="flaticon-research"></i>
                   </div>

@@ -1,44 +1,53 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import AliceCarousel from "react-alice-carousel";
 import "react-alice-carousel/lib/alice-carousel.css";
 import Clients from "./Clients";
 import Expertteam from "./Expertteam";
 import Testimonial from "./Testimonial";
-import ReactWhatsapp from "react-whatsapp";
-import MetaTags from 'react-meta-tags';
+// import ReactWhatsapp from "react-whatsapp";
+import MetaTags from "react-meta-tags";
 
+import webDev from "../img/codingWebDev.jpg";
+import mobileDev from "../img/mobileDevelopment.jpg";
+import cloudService from "../img/cloudService.jpg";
+import agile from "../img/Agile.jpg";
+
+// import Common from "../Container/Common";
 
 import { Helmet } from "react-helmet";
-
 
 function Home() {
   const list = [
     {
       item: "Cloud Services",
-      image: "images/slider1.webp",
+      // image: 'images/slider1.webp',
+      image: cloudService,
       descp:
         "We can assist you in identifying and implementing the appropriate cloud solution to meet your critical application and ERP migration goals and business circumstances.",
     },
     {
       item: "Web Development",
-      image: "images/slider2.webp",
+      // image: 'images/slider2.webp',
+      image: webDev,
       descp:
         "With a broad selection of web application services, we guarantee to meet all of your business needs. Our web developers are driven to produce outcomes that assist you in growing your company.",
     },
     {
       item: "Mobile App Development",
-      image: "images/slider3.webp",   
+      // image: 'images/slider3.webp',
+      image: mobileDev,
       descp:
         "We provide complete application design, integration, and management services. Whether it's a consumer-oriented app or a transformative enterprise-class solution",
     },
     {
       item: "Agile Team Deployment",
-      image: "images/slider4.webp",
+      // image: 'images/slider4.webp',
+      image: agile,
       descp:
         "We have the ability to respond quickly to the growing demand for Agile Team Deployment in the business sector through continuous training and procedure upgrades.",
     },
   ];
-
   const responsive = {
     0: { items: 1 },
     568: { items: 2 },
@@ -160,11 +169,9 @@ function Home() {
           name="Keywords"
           content="Website Development, Cloud Services, Business Consulting,Software Development, It Services, Java, Php, Aws, Python, Wordpress, Blockchain, System Developer,IT outsourcing, hr outsourcing offshore development,,Mobile App Development, Minimum Viable Product,Data Engineering, New Product Development."
         />
-        </Helmet>
+      </Helmet>
 
-        <MetaTags>         
-
-
+      <MetaTags>
         <meta
           name="fb:app_id"
           content="1369882117133030"
@@ -212,46 +219,51 @@ function Home() {
           name="robots"
           content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
         />
-         </MetaTags>
+      </MetaTags>
 
       <AliceCarousel
         controlsStrategy="alternate"
         autoPlay
         autoPlayStrategy="none"
         autoPlayInterval={3000}
-        animationDuration={3000}
+        animationDuration={10}
         animationType="fadeout"
         infinite
       >
-        {list.map((items) => (
-          <>
-            <div
-              id="rs-slider"
-              className="rs-slider slider3 rs-slider-style3"
-              style={{ position: "relative", overflow: "hidden" }}
-            >
-              <div className="bend niceties">
-                {/* <div id="nivoSlider" className="slides"></div> */}
-                <img src={items.image} alt="trhslider" title="" />
-              </div>
-              <div className="wave"></div>
-              <div id="slide-1" className="slider-direction">
-                <div className="content-part">
-                  <div className="slider-des">
-                    <h1 className="sl-subtitle">{items.item}</h1>
-                    <p className="sl-title">{items.descp}</p>
-                  </div>
-                  <div className="slider-bottom">
-                    <a className="readon blue-slide" href="/services">
-                      Get Started
-                    </a>
+        {list.map((items) => {
+          const backgroundStyle = {
+            backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(${items.image})`,
+          };
+          return (
+            <>
+              {/* <div>
+              <Common
+                banner={items?.image}
+                name={items?.item}
+                description={items?.descp}
+              />
+            </div> */}
+              <div className="banner" style={backgroundStyle}>
+                <div className="cover_banner">
+                  <div className="text_content">
+                    <div className="title_text">
+                      {items?.item.toUpperCase()}
+                    </div>
+                    <div className="title_discp" style={{ color: "white" }}>
+                      {items?.descp}
+                    </div>
+
+                    <Link to="/services" className="get_btn">
+                      <button className="get_btn_btn">Get Started</button>
+                    </Link>
                   </div>
                 </div>
               </div>
-            </div>
-          </>
-        ))}
+            </>
+          );
+        })}
       </AliceCarousel>
+
       <div
         className="rs-about style4 pt-25 pb-95"
         style={{ position: "relative", overflow: "hidden" }}

@@ -6,6 +6,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { omit } from "lodash";
 import { Helmet } from "react-helmet";
+import Captcha from "./Captcha.js";
 
 function Contactus() {
   const [name, setName] = useState("");
@@ -16,6 +17,8 @@ function Contactus() {
   const [values, setValues] = useState({});
   const [errors, setErrors] = useState({});
   const [nameerror, setNameerror] = useState("");
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+  const [resetCaptcha, setResetCaptcha] = useState(false);
 
   const validate = (event, name, value) => {
     switch (name) {
@@ -60,6 +63,10 @@ function Contactus() {
     setPhone(onlyDigits);
   };
 
+  const handleCaptchaVerify = (isVerified) => {
+    setIsCaptchaVerified(isVerified);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const regExp = /^[a-z][a-z]+\d*$|^[a-z]\d\d+$/i;
@@ -81,32 +88,37 @@ function Contactus() {
         if (phone !== "") {
           if (website !== "") {
             if (message !== "") {
-              let data = {
-                message,
-                name,
-                email,
-                phone,
-                website,
-              };
-              axios({
-                url: baseURL + "contact/create",
-                method: "post",
-                data: data,
-              })
-                .then((res) => {
-                  toast(res.data.message);
-                  console.log(res.data.message);
-
-                  setTimeout(() => {
-                    setName("");
-                    setMessage("");
-                    setEmail("");
-                    setPhone("");
-                    setwebsite("");
-                  }, 1000);
+              if (isCaptchaVerified) {
+                let data = {
+                  message,
+                  name,
+                  email,
+                  phone,
+                  website,
+                };
+                axios({
+                  url: baseURL + "contact/create",
+                  method: "post",
+                  data: data,
                 })
+                  .then((res) => {
+                    toast(res.data.message);
+                    console.log(res.data.message);
 
-                .catch((err) => console.log(err.response.data.message));
+                    setTimeout(() => {
+                      setName("");
+                      setMessage("");
+                      setEmail("");
+                      setPhone("");
+                      setwebsite("");
+                      setResetCaptcha(true);
+                    }, 1000);
+                  })
+
+                  .catch((err) => console.log(err.response.data.message));
+              } else {
+                toast("Please Enter The Valid Captcha");
+              }
             } else {
               toast("Please Fill the Message Field");
             }
@@ -212,7 +224,12 @@ function Contactus() {
                 </div>
                 <div className="contact-wrap">
                   <div id="form-messages"></div>
-                  <form id="contact-form" method="post" action="mailer.php">
+                  <form
+                    id="contact-form"
+                    method="post"
+                    action="mailer.php"
+                    noValidate
+                  >
                     <fieldset>
                       <div className="row">
                         <div className="col-lg-6 col-md-6 col-sm-6 mb-30">
@@ -274,7 +291,7 @@ function Contactus() {
                           />
                         </div>
 
-                        <div className="col-lg-12 mb-35">
+                        <div className="col-lg-12 mb-20">
                           <textarea
                             className="from-control"
                             id="message"
@@ -284,6 +301,12 @@ function Contactus() {
                             required
                           ></textarea>
                         </div>
+                      </div>
+                      <div className="col-12">
+                        <Captcha
+                          onVerify={handleCaptchaVerify}
+                          reset={resetCaptcha}
+                        />
                       </div>
                       <div className="btn-part">
                         <div className="form-group mb-0">
@@ -303,7 +326,7 @@ function Contactus() {
             </div>
           </div>
 
-          <div className="rs-contact main-home">
+          <div className="rs-contact main-home pt-md-0 pt-4">
             <div className="container">
               <div className="contact-icons-style box-address pt-95 ">
                 <div className="row">
