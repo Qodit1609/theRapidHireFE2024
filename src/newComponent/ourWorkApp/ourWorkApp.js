@@ -2,7 +2,7 @@ import React from "react";
 
 import ServiceOffer from "../serviceOffers/serviceOffers";
 import Common from "../../Container/Common";
-import AppBanner from "../../img/codingWebDev.jpg";
+import AppBanner from "../../img/mobile.jpg";
 
 const cardContent = [
   {
@@ -52,8 +52,6 @@ const OurWorkApp = () => {
         />
 
         <ServiceOffer heading={heading} text={text} cardContent={cardContent} />
-
-        
       </div>
     </>
   );

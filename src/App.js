@@ -30,6 +30,9 @@ import OurWorkCyber from "./newComponent/ourWorkCyber/ourWorkCyber";
 import OurWorkDataAnalyst from "./newComponent/ourWorkDataAnalyst/ourWorkDataAnalyst";
 import OurWorkIOT from "./newComponent/ourWorkIOT/ourWorkIOT";
 import OurWorkEcommerce from "./newComponent/ourWorkEcommerce/ourWorkEcommerce";
+import OurWorkItServices from "./newComponent/ourWorkItServices/ourWorkItServices";
+import OurWorkIndustrySolution from "./newComponent/ourWorkIndustrySolution/ourWorkIndustrySolution";
+import OurWorkDigitalTransformation from "./newComponent/ourWorkDigitalTransformation/ourWorkDigitalTransformation";
 
 const Home = lazy(() => import("./components/Home"));
 
@@ -341,7 +344,22 @@ function App() {
               path="/our-work/eCommerce"
               element={<OurWorkEcommerce />}
             ></Route>
+            <Route
+              exact
+              path="/our-work/it-services"
+              element={<OurWorkItServices />}
+            ></Route>
             <Route exact path="/our-work/iot" element={<OurWorkIOT />}></Route>
+            <Route
+              exact
+              path="/our-work/industry-solution"
+              element={<OurWorkIndustrySolution />}
+            ></Route>
+            <Route
+              exact
+              path="/our-work/digital-transformation"
+              element={<OurWorkDigitalTransformation />}
+            ></Route>
           </Routes>
           <Footer />
           {/* <Sidebar /> */}

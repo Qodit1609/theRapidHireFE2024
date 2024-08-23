@@ -2,7 +2,7 @@ import React from "react";
 
 import Common from "../../Container/Common";
 import ServiceOffer from "../serviceOffers/serviceOffers";
-import AgileBanner from "../../img/Agile.jpg";
+import CyberBanner from "../../img/cyberSecurty.jpg";
 
 const cardContent = [
   {
@@ -43,7 +43,7 @@ const OurWorkCyber = () => {
     <>
       <div>
         <Common
-          banner={AgileBanner}
+          banner={CyberBanner}
           name={"Cyber Security"}
           description={
             "Make your business cyber resilient to manage risk and accelerate innovation with The Rapid Hire Cyber Security Services."

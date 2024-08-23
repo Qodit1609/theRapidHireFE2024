@@ -7,6 +7,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { omit } from "lodash";
 import { Helmet } from "react-helmet";
 import Captcha from "./Captcha.js";
+import ContactUsImg from "../img/itConsultation.jpg";
 
 function Contactus() {
   const [name, setName] = useState("");
@@ -195,8 +196,9 @@ function Contactus() {
       </Helmet>
       <div className="offwrap"></div>
 
-      <div className="main-content">
+      <div className="main-content ">
         <Common
+          banner={ContactUsImg}
           name="Get in touch"
           description="Get in touch with us and discuss the needs and requirements of
          your development project."

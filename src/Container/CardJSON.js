@@ -97,26 +97,54 @@ const TechnoData = [
 
 const Teamdata = [
   {
-    imgsrc: "images/team3.webp",
-    title: "Vikas Choudhary",
-    description: "SOFTWARE DEVELOPER",
+    imgsrc: "images/versha.jpeg",
+    title: "Varsha Rathore",
+    description: "DIRECTOR",
+  },
+  {
+    imgsrc: "images/Umesh.jpg",
+    title: "Umesh Rathore",
+    description: "Customer Relationship Manager",
   },
   {
     imgsrc: "images/team2.webp",
     title: "Nitin Vishvakarma",
-    description: "SOFTWARE DEVELOPER",
+    description: "DELIVERY MANAGER",
   },
-
   {
-    imgsrc: "images/team6.webp",
-    title: "Raghav Dubey",
-    description: "SOFTWARE DEVELOPER",
+    imgsrc: "images/team3.webp",
+    title: "Vikas Choudhary",
+    description: "TECHNOLOGY LEAD",
   },
-
+  {
+    imgsrc: "images/shubham.jpeg",
+    title: "Shubham Shrivastava",
+    description: "AVP-SALE'S",
+  },
+  {
+    imgsrc: "images/raghav.jpg",
+    title: "Raghav Dubey",
+    description: "TECHNOLOGY LEAD",
+  },
+  {
+    imgsrc: "images/dakshina2.jpeg",
+    title: "Dakshina Trivedi",
+    description: "HR EXECUTIVE",
+  },
   {
     imgsrc: "images/team8.webp",
     title: "Navin Kukreja",
-    description: "SOFTWARE DEVELOPER",
+    description: "SR. SOFTWARE DEVELOPER",
+  },
+  {
+    imgsrc: "images/abhishek.jpg",
+    title: "Abhishek Dubey",
+    description: "SR. SOFTWARE DEVELOPER",
+  },
+  {
+    imgsrc: "images/himanshu2.jpeg",
+    title: "Himanshu Rathore",
+    description: "QA LEAD",
   },
 ];
 
@@ -167,7 +195,7 @@ const OurWorkList = [
   },
   {
     filed: "Industry Solutions",
-    link: "our-work",
+    link: "our-work/industry-solution",
   },
   {
     filed: "Data Analytics",
@@ -179,11 +207,11 @@ const OurWorkList = [
   },
   {
     filed: "Managed IT Services",
-    link: "our-work",
+    link: "our-work/it-services",
   },
   {
     filed: "Digital Transformation",
-    link: "our-work",
+    link: "our-work/digital-transformation",
   },
   {
     filed: "E-commerce Solutions",
@@ -191,5 +219,26 @@ const OurWorkList = [
   },
 ];
 
+const BlogContent = [
+  {
+    bannerImage: "images/iotBlogImg.webp",
+    title: "How IoT Devices Are Shaping the Future of Home Automation",
+    mainDesc:
+      "Imagine a home where lights dim automatically for movies, the thermostat adjusts to your preference, and the security system alerts you to unusual activity - all effortlessly. This convenience is growing, thanks to the Internet",
+  },
+  {
+    bannerImage: "images/iotBlogImg.webp",
+    title: "How IoT Devices Are Shaping the Future of Home Automation",
+    mainDesc:
+      "Imagine a home where lights dim automatically for movies, the thermostat adjusts to your preference, and the security system alerts you to unusual activity - all effortlessly. This convenience is growing, thanks to the Internet",
+  },
+  {
+    bannerImage: "images/iotBlogImg.webp",
+    title: "How IoT Devices Are Shaping the Future of Home Automation",
+    mainDesc:
+      "Imagine a home where lights dim automatically for movies, the thermostat adjusts to your preference, and the security system alerts you to unusual activity - all effortlessly. This convenience is growing, thanks to the Internet",
+  },
+];
+
 export default CardData;
-export { TechnoData, Teamdata, OurWorkList };
+export { TechnoData, Teamdata, OurWorkList, BlogContent };

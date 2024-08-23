@@ -2,7 +2,7 @@ import React from "react";
 
 import Common from "../../Container/Common";
 import ServiceOffer from "../serviceOffers/serviceOffers";
-import AgileBanner from "../../img/Agile.jpg";
+import IoTBanner from "../../img/iot.jpg";
 
 const cardContent = [
   {
@@ -44,7 +44,7 @@ const OurWorkIOT = () => {
     <>
       <div>
         <Common
-          banner={AgileBanner}
+          banner={IoTBanner}
           name={"Internet of Things"}
           description={
             "Embrace smart technology with our robust IoT solutions, designed to give you a competitive edge globally."

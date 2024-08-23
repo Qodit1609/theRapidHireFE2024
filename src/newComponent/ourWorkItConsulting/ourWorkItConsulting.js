@@ -2,7 +2,7 @@ import React from "react";
 
 import Common from "../../Container/Common";
 import ServiceOffer from "../serviceOffers/serviceOffers";
-import AgileBanner from "../../img/Agile.jpg";
+import ItConsultingBanner from "../../img/itConsultation.jpg";
 
 const cardContent = [
   {
@@ -43,7 +43,7 @@ const OurWorkItConsulting = () => {
     <>
       <div>
         <Common
-          banner={AgileBanner}
+          banner={ItConsultingBanner}
           name={"IT Consulting"}
           description={
             "Utilize our extensive technology expertise in digital transformation to create effective short- and long-term strategies for your business."

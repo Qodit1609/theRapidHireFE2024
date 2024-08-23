@@ -2,7 +2,7 @@ import React from "react";
 
 import Common from "../../Container/Common";
 import ServiceOffer from "../serviceOffers/serviceOffers";
-import AgileBanner from "../../img/Agile.jpg";
+import DataAnalystBanner from "../../img/dataAnalysis.jpg";
 
 const cardContent = [
   {
@@ -43,7 +43,7 @@ const OurWorkDataAnalyst = () => {
     <>
       <div>
         <Common
-          banner={AgileBanner}
+          banner={DataAnalystBanner}
           name={"Data Analyst"}
           description={
             "Develop a data-driven approach with intelligent insights to guide your digital future."

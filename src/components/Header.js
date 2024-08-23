@@ -13,7 +13,13 @@ function Header() {
   const [token, setToken] = useState("");
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const [showPortfolio, setShowPortfolio] = useState(false);
+  const [menuToCloseIcon, setMenuToCloseIcon] = useState(false);
+
   const dropdownToggleRef = useRef(null);
+
+  const handleMenuToCloseIconToggle = () => {
+    setMenuToCloseIcon(!menuToCloseIcon);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -75,15 +81,20 @@ function Header() {
         </a>
 
         <button
-          className="navbar-toggler"
+          className={`navbar-toggler ${
+            menuToCloseIcon
+              ? "btn-close border border-secondary px-3 py-2 "
+              : ""
+          }`}
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
+          aria-expanded={menuToCloseIcon}
+          aria-label={menuToCloseIcon ? "Close" : "Toggle navigation"}
+          onClick={handleMenuToCloseIconToggle}
         >
-          <span className="navbar-toggler-icon"></span>
+          <span className={menuToCloseIcon ? "" : "navbar-toggler-icon"}></span>
         </button>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">

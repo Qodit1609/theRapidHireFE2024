@@ -2,7 +2,7 @@ import React from "react";
 
 import Common from "../../Container/Common";
 import ServiceOffer from "../serviceOffers/serviceOffers";
-import AgileBanner from "../../img/Agile.jpg";
+import EcommerceBanner from "../../img/eCommerce.jpg";
 
 const cardContent = [
   {
@@ -51,7 +51,7 @@ const OurWorkEcommerce = () => {
     <>
       <div>
         <Common
-          banner={AgileBanner}
+          banner={EcommerceBanner}
           name={"eCommerce"}
           description={
             "Setting new standards in revolutionizing the shopping experience with our tailored eCommerce software solutions."

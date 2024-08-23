@@ -2,7 +2,7 @@ import React from "react";
 
 import Common from "../../Container/Common";
 import ServiceOffer from "../serviceOffers/serviceOffers";
-import AgileBanner from "../../img/Agile.jpg";
+import CloudBanner from "../../img/cloudService.jpg";
 
 const cardContent = [
   {
@@ -43,7 +43,7 @@ const OurWorkCloudService = () => {
     <>
       <div>
         <Common
-          banner={AgileBanner}
+          banner={CloudBanner}
           name={"Cloud Service"}
           description={
             "Empower enterprise agility with our flexible, scalable, and cost-effective Cloud Computing Services, designed to simplify, streamline, and optimize your workflows for greater efficiency."

@@ -2,7 +2,7 @@ import React from "react";
 
 import Common from "../../Container/Common";
 import ServiceOffer from "../serviceOffers/serviceOffers";
-import AgileBanner from "../../img/Agile.jpg";
+import DevOpsBanner from "../../img/devops.jpg";
 
 const cardContent = [
   {
@@ -43,7 +43,7 @@ const OurWorkDevOps = () => {
     <>
       <div>
         <Common
-          banner={AgileBanner}
+          banner={DevOpsBanner}
           name={"DevOps"}
           description={
             "Leverage the power of DevOps practices to streamline development processes, enhance collaboration, and accelerate delivery, ensuring efficient and scalable solutions for optimal business performance."

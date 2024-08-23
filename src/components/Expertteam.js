@@ -10,8 +10,33 @@ function Expertteam() {
   };
 
   const items1 = [
-    
     <div className="itemteam" data-value="1">
+      <div className="team-item-wrap">
+        <div className="team-wrap">
+          <div className="image-inner">
+            <img src="images/versha.jpeg" alt="Varsha" />
+          </div>
+        </div>
+        <div className="team-content text-center">
+          <h4 className="person-name">Varsha Rathore</h4>
+          <span className="designation">DIRECTOR</span>
+        </div>
+      </div>
+    </div>,
+    <div className="itemteam" data-value="1">
+      <div className="team-item-wrap">
+        <div className="team-wrap">
+          <div className="image-inner">
+            <img src="images/Umesh.jpg" alt="Umesh" />
+          </div>
+        </div>
+        <div className="team-content text-center">
+          <h4 className="person-name">Umesh Rathore</h4>
+          <span className="designation">Customer Relationship Manager</span>
+        </div>
+      </div>
+    </div>,
+    <div className="itemteam" data-value="2">
       <div className="team-item-wrap">
         <div className="team-wrap">
           <div className="image-inner">
@@ -20,11 +45,11 @@ function Expertteam() {
         </div>
         <div className="team-content text-center">
           <h4 className="person-name">Nitin Vishvakarma</h4>
-          <span className="designation">SOFTWARE DEVELOPER</span>
+          <span className="designation">DELIVERY MANAGER</span>
         </div>
       </div>
     </div>,
-    <div className="itemteam" data-value="2">
+    <div className="itemteam" data-value="3">
       <div className="team-item-wrap">
         <div className="team-wrap">
           <div className="image-inner">
@@ -33,36 +58,88 @@ function Expertteam() {
         </div>
         <div className="team-content text-center">
           <h4 className="person-name">Vikas Choudhary</h4>
-          <span className="designation">SOFTWARE DEVELOPER</span>
+          <span className="designation">TECHNOLOGY LEAD</span>
         </div>
       </div>
     </div>,
-    <div className="itemteam" data-value="3">
-    <div className="team-item-wrap">
-      <div className="team-wrap">
-        <div className="image-inner">
-          <img src="images/team8.webp" alt="Navin Kukreja" />
-        </div>
-      </div>
-      <div className="team-content text-center">
-        <h4 className="person-name">Navin Kukreja</h4>
-        <span className="designation">SOFTWARE DEVELOPER</span>
-      </div>
-    </div>
-  </div>,
     <div className="itemteam" data-value="4">
       <div className="team-item-wrap">
         <div className="team-wrap">
           <div className="image-inner">
-            <img src="images/team6.webp" alt="raghav dubey" />
+            <img src="images/shubham.jpeg" alt="Shubham Shrivastava" />
+          </div>
+        </div>
+        <div className="team-content text-center">
+          <h4 className="person-name">Shubham Shrivastava</h4>
+          <span className="designation">AVP-SALE'S</span>
+        </div>
+      </div>
+    </div>,
+    <div className="itemteam" data-value="5">
+      <div className="team-item-wrap">
+        <div className="team-wrap">
+          <div className="image-inner">
+            <img src="images/raghav.jpg" alt="raghav dubey" />
           </div>
         </div>
         <div className="team-content text-center">
           <h4 className="person-name">Raghav Dubey</h4>
-          <span className="designation">SOFTWARE DEVELOPER</span>
+          <span className="designation">TECHNOLOGY LEAD</span>
         </div>
       </div>
-    </div>
+    </div>,
+    <div className="itemteam" data-value="6">
+      <div className="team-item-wrap">
+        <div className="team-wrap">
+          <div className="image-inner">
+            <img src="images/dakshina2.jpeg" alt="Dakshina" />
+          </div>
+        </div>
+        <div className="team-content text-center">
+          <h4 className="person-name">Dakshina Trivedi</h4>
+          <span className="designation">HR EXECUTIVE</span>
+        </div>
+      </div>
+    </div>,
+    <div className="itemteam" data-value="7">
+      <div className="team-item-wrap">
+        <div className="team-wrap">
+          <div className="image-inner">
+            <img src="images/team8.webp" alt="Navin Kukreja" />
+          </div>
+        </div>
+        <div className="team-content text-center">
+          <h4 className="person-name">Navin Kukreja</h4>
+          <span className="designation">SR. SOFTWARE DEVELOPER</span>
+        </div>
+      </div>
+    </div>,
+    <div className="itemteam" data-value="8">
+      <div className="team-item-wrap">
+        <div className="team-wrap">
+          <div className="image-inner">
+            <img src="images/abhishek.jpg" alt="Abhishek" />
+          </div>
+        </div>
+        <div className="team-content text-center">
+          <h4 className="person-name">Abhishek Dubey</h4>
+          <span className="designation">SR. SOFTWARE DEVELOPER</span>
+        </div>
+      </div>
+    </div>,
+    <div className="itemteam" data-value="9">
+      <div className="team-item-wrap">
+        <div className="team-wrap">
+          <div className="image-inner">
+            <img src="images/himanshu2.jpeg" alt="Himanshu" />
+          </div>
+        </div>
+        <div className="team-content text-center">
+          <h4 className="person-name">Himanshu Rathore</h4>
+          <span className="designation">QA LEAD</span>
+        </div>
+      </div>
+    </div>,
   ];
 
   return (
