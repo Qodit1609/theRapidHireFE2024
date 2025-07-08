@@ -112,15 +112,15 @@ const Teamdata = [
     description: "DELIVERY MANAGER",
   },
   {
-    imgsrc: "images/team3.webp",
+    imgsrc: "images/team3.jpg",
     title: "Vikas Choudhary",
     description: "TECHNOLOGY LEAD",
   },
-  {
-    imgsrc: "images/shubham.jpeg",
-    title: "Shubham Shrivastava",
-    description: "AVP-SALE'S",
-  },
+  // {
+  //   imgsrc: "images/shubham.jpeg",
+  //   title: "Shubham Shrivastava",
+  //   description: "AVP-SALE'S",
+  // },
   {
     imgsrc: "images/raghav.jpg",
     title: "Raghav Dubey",
@@ -129,7 +129,7 @@ const Teamdata = [
   {
     imgsrc: "images/dakshina2.jpeg",
     title: "Dakshina Trivedi",
-    description: "HR EXECUTIVE",
+    description: "HR Manager",
   },
   {
     imgsrc: "images/team8.webp",
@@ -141,11 +141,11 @@ const Teamdata = [
     title: "Abhishek Dubey",
     description: "SR. SOFTWARE DEVELOPER",
   },
-  {
-    imgsrc: "images/himanshu2.jpeg",
-    title: "Himanshu Rathore",
-    description: "QA LEAD",
-  },
+  // {
+  //   imgsrc: "images/himanshu2.jpeg",
+  //   title: "Himanshu Rathore",
+  //   description: "QA LEAD",
+  // },
 ];
 
 const OurWorkList = [
