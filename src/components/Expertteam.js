@@ -53,7 +53,7 @@ function Expertteam() {
       <div className="team-item-wrap">
         <div className="team-wrap">
           <div className="image-inner">
-            <img src="images/team3.webp" alt="Vikas Choudhary" />
+            <img src="images/team3.jpg" alt="Vikas Choudhary" />
           </div>
         </div>
         <div className="team-content text-center">
@@ -62,19 +62,19 @@ function Expertteam() {
         </div>
       </div>
     </div>,
-    <div className="itemteam" data-value="4">
-      <div className="team-item-wrap">
-        <div className="team-wrap">
-          <div className="image-inner">
-            <img src="images/shubham.jpeg" alt="Shubham Shrivastava" />
-          </div>
-        </div>
-        <div className="team-content text-center">
-          <h4 className="person-name">Shubham Shrivastava</h4>
-          <span className="designation">AVP-SALE'S</span>
-        </div>
-      </div>
-    </div>,
+    // <div className="itemteam" data-value="4">
+    //   <div className="team-item-wrap">
+    //     <div className="team-wrap">
+    //       <div className="image-inner">
+    //         <img src="images/shubham.jpeg" alt="Shubham Shrivastava" />
+    //       </div>
+    //     </div>
+    //     <div className="team-content text-center">
+    //       <h4 className="person-name">Shubham Shrivastava</h4>
+    //       <span className="designation">AVP-SALE'S</span>
+    //     </div>
+    //   </div>
+    // </div>,
     <div className="itemteam" data-value="5">
       <div className="team-item-wrap">
         <div className="team-wrap">
@@ -92,12 +92,16 @@ function Expertteam() {
       <div className="team-item-wrap">
         <div className="team-wrap">
           <div className="image-inner">
-            <img src="images/dakshina2.jpeg" alt="Dakshina" />
+            <img
+              src="images/dakshina2.jpeg"
+              alt="Dakshina"
+              style={{ objectFit: "cover" }}
+            />
           </div>
         </div>
         <div className="team-content text-center">
           <h4 className="person-name">Dakshina Trivedi</h4>
-          <span className="designation">HR EXECUTIVE</span>
+          <span className="designation">HR MANAGER</span>
         </div>
       </div>
     </div>,
@@ -118,7 +122,11 @@ function Expertteam() {
       <div className="team-item-wrap">
         <div className="team-wrap">
           <div className="image-inner">
-            <img src="images/abhishek.jpg" alt="Abhishek" />
+            <img
+              src="images/abhishek.jpg"
+              alt="Abhishek"
+              style={{ width: "139px", height: "136px" }}
+            />
           </div>
         </div>
         <div className="team-content text-center">
@@ -127,19 +135,19 @@ function Expertteam() {
         </div>
       </div>
     </div>,
-    <div className="itemteam" data-value="9">
-      <div className="team-item-wrap">
-        <div className="team-wrap">
-          <div className="image-inner">
-            <img src="images/himanshu2.jpeg" alt="Himanshu" />
-          </div>
-        </div>
-        <div className="team-content text-center">
-          <h4 className="person-name">Himanshu Rathore</h4>
-          <span className="designation">QA LEAD</span>
-        </div>
-      </div>
-    </div>,
+    // <div className="itemteam" data-value="9">
+    //   <div className="team-item-wrap">
+    //     <div className="team-wrap">
+    //       <div className="image-inner">
+    //         <img src="images/himanshu2.jpeg" alt="Himanshu" />
+    //       </div>
+    //     </div>
+    //     <div className="team-content text-center">
+    //       <h4 className="person-name">Himanshu Rathore</h4>
+    //       <span className="designation">QA LEAD</span>
+    //     </div>
+    //   </div>
+    // </div>,
   ];
 
   return (
